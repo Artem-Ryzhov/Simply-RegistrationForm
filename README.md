@@ -1,1 +1,1 @@
-# Simply-RegistrationForm
+# Hibernate Simply-RegistrationForm

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    <display-name>ClinicPet</display-name>
+
+
+    <servlet>
+        <servlet-name>AddUser</servlet-name>
+        <servlet-class>controller.AddUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddUser</servlet-name>
+        <url-pattern>/useradd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserView</servlet-name>
+        <servlet-class>controller.UserView</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserView</servlet-name>
+        <url-pattern>/userview</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteAll</servlet-name>
+        <servlet-class>controller.DeleteAll</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteAll</servlet-name>
+        <url-pattern>/deleteall</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddCountry</servlet-name>
+        <servlet-class>controller.AddCountry</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCountry</servlet-name>
+        <url-pattern>/addusers</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AddCity</servlet-name>
+        <servlet-class>controller.AddCity</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCity</servlet-name>
+        <url-pattern>/addcity</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserEdit</servlet-name>
+        <servlet-class>controller.UserEdit</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserEdit</servlet-name>
+        <url-pattern>/useredit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeletUser</servlet-name>
+        <servlet-class>controller.DeletUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeletUser</servlet-name>
+        <url-pattern>/deleteuser</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
+
+
+

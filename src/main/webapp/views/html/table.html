@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/table.css">
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+        <table class="table table-striped custab">
+            <thead>
+            <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Parent ID</th>
+                <th class="text-center">Action</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>News</td>
+                <td>News Cate</td>
+                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Products</td>
+                <td>Main Products</td>
+                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Blogs</td>
+                <td>Parent Blogs</td>
+                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+<h2>User Table:</h2>
+<table  border="6"  width="600" height = "50">
+    <tr class="d0">
+        <td>User id:</td>
+        <td>User name:</td>
+        <td>User lastname:</td>
+        <td>User email:</td>
+        <td> Country:</td>
+        <td> City:</td>
+        <td>Action:</td>
+    </tr>
+
+    <c:forEach items="${users}" var="users" varStatus="status">
+        <tr class="d1" valign="top"  border="6"  width="400" height = "50" >
+            <td>${users.getUserid()} </td>
+            <td>${users.getName()} </td>
+            <td>${users.getLastname()} </td>
+            <td>${users.getEmail()} </td>
+            <td>${users.getCountry()}</td>
+            <td>${users.getCity()}</td>
+            <td>
+                <a href="${pageContext.servletContext.contextPath}/useredit?id=${users.getUserid()}">Edit</a>
+                <a href="${pageContext.servletContext.contextPath}/deleteuser?id=${users.getUserid()}">Delete</a>
+            </td>
+        </tr>
+    </c:forEach>
+</table>
+
+<a href="${pageContext.servletContext.contextPath}/addusers">Add New User</a>
+
+<a href="/deleteall">DeleteAllUsers</a>
+
+</body>
+</html>
